@@ -1,0 +1,388 @@
+/* Styles globaux */
+body {
+    background-image: url(./images/interieur-salle-3d-grunge-arriere-plan-atmosphere-fumee-fumee.jpg);
+    background-position: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classe pour cacher les éléments */
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+
+/* Styles pour l'en-tête */
+header {
+    background: none;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 0;
+    margin-top: 90px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Styles pour le bandeau défilant */
+.scrolling-banner {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px 0;
+    position: relative;
+    font-size: 25px;
+}
+
+.scrolling-banner::after {
+    content: attr(data-text);
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    animation: scrollText 20s linear infinite;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes scrollText {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Styles pour les sections */
+section {
+    padding-top: 60px;
+}
+
+h2 {
+    color: #4caf50;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+/* Styles pour la section about */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-content .photo {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styles modernes pour le paragraphe de présentation */
+.about-content .lead {
+    font-size: 18px;
+    /* Taille de police adaptée pour la lisibilité */
+    color: #fff;
+    /* Couleur de texte pour contraste élevé ou ajustez selon le fond */
+    max-width: 800px;
+    /* Contrôle la largeur du texte pour une meilleure lisibilité */
+    margin: auto;
+    /* Centre le texte horizontalement */
+    padding: 20px;
+    /* Ajoute de l'espace autour du texte */
+    text-align: left;
+    /* Justifie le texte pour un look plus structuré */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond légèrement transparent */
+    border-radius: 10px;
+    /* Bords arrondis pour un look doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre subtile pour de la profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation douce */
+}
+
+.about-content .lead:hover {
+    transform: translateY(-5px);
+    /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Styles pour les barres de progression */
+.progress-wrapper progress {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    transition: width 2s ease-in-out;
+}
+
+/* Styles pour les compétences animées et les animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour les projets */
+.card {
+    font-size: 18px;
+    /* Taille de police adaptée pour la lisibilité */
+    color: #fff;
+    /* Couleur de texte pour contraste élevé ou ajustez selon le fond */
+    max-width: 800px;
+    /* Contrôle la largeur du texte pour une meilleure lisibilité */
+    margin: auto;
+    /* Centre le texte horizontalement */
+    padding: 20px;
+    /* Ajoute de l'espace autour du texte */
+    text-align: left;
+    /* Justifie le texte pour un look plus structuré */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond légèrement transparent */
+    border-radius: 10px;
+    /* Bords arrondis pour un look doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre subtile pour de la profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation douce */
+}
+
+
+
+
+.card-preview {
+    cursor: pointer;
+    /* Suggère que l'élément est cliquable */
+    /* Ajoutez d'autres styles ici si nécessaire */
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    /* Ombre plus prononcée au survol */
+}
+
+/* Styles pour les liens */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour le pied de page */
+
+footer {
+    margin: 0;
+    /* Fixe le footer en bas de l'écran */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Alignement au bas de l'écran */
+    
+    /* Couleur de fond du footer, ajustez selon votre design */
+    color: #fff;
+    padding: 20px 0;
+    /* Padding vertical pour un peu d'espace autour du contenu */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* Distribue l'espace autour des éléments */
+    align-items: center;
+    /* Centre les éléments verticalement */
+    flex-wrap: wrap;
+}
+
+.icon-container {
+    position: relative;
+    margin: 20px;
+    /* Augmenté l'espacement entre les icônes */
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact-list li {
+    margin: 0 10px;
+    /* Espacement horizontal entre les icônes */
+}
+
+.contact-list .icon {
+    width: 40px;
+    height: 40px;
+    fill: #fefefe;
+    /* Couleur des icônes, ajustez selon besoin */
+    transition: transform 0.3s ease;
+    /* Animation douce pour le survol */
+}
+
+.contact-list .icon:hover {
+    transform: scale(1.5);
+    /* Agrandit l'icône au survol */
+}
+
+.icon-container {
+    position: relative;
+    margin: 20px;
+    /* Augmenté l'espacement entre les icônes */
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon {
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.icon-text {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    /* Augmente l'espacement entre l'icône et le texte caché */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Ajouté pour une transition douce */
+    opacity: 0;
+    /* Assure que le texte est initialement caché */
+}
+
+.svg.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+
+.icon-container:hover .icon {
+    transform: translateY(-10px);
+}
+
+.icon-container:hover .svg.icon {
+    transform: translateY(-10px);
+    /* Lève l'icône */
+}
+
+.icon-container:hover .icon-text {
+    display: block;
+    opacity: 1;
+    /* Rend le texte visible */
+    transform: translateX(-50%) translateY(10px);
+    /* Ajuste la position pour plus d'espacement */
+}
+
+/* Media queries pour ajustements responsifs */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Aligner le contenu du menu à droite une fois ouvert */
+    #about .photo {
+        width: 80%;
+        margin-bottom: 80px;
+    }
+
+    #about .lead,
+    .card-text {
+        font-size: 14px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .contact-list li {
+        flex-basis: 100%;
+    }
+   
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        margin: 15px 0;
+    }
+
+    .contact-list li {
+        flex-basis: 48%;
+    }
+
+    .navbar-toggler {
+        float: right !important;
+        /* Assure que le bouton est à droite sur les tablettes aussi */
+    }
+    
+}
